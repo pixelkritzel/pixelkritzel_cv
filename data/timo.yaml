@@ -1,34 +1,41 @@
 ---
-Zur Person:
-  Name: Timo Zöller
-  Wohnort: Berlin
+"Zur Person":
+  "Name": "Timo Zöller"
+  "Wohnort": "Berlin"
 
-Werdegang:
-  2002: Abitur am Gymnasium Loger Straße
-  2003-2004: Studium der Philosophie und Germanistik an **Universität Bremen**
-  2004-2010: Filmregie und Drehbuch Studium an der selbstorganisierten Filmschule **Filmarche e.V.**
-  2011-heute: Arbeit als freiberuflicher Frontend-Entwickler
+"Werdegang":
+  "2002": "Abitur am Gymnasium Loger Straße"
+  "2003-2004": "Studium der Philosophie und Germanistik an **Universität Bremen**"
+  "2004-2010": "Filmregie und Drehbuch Studium an der selbstorganisierten Filmschule **Filmarche e.V.**"
+  "2011-heute": "Arbeit als freiberuflicher Frontend-Entwickler"
 
-Kunden (Auswahl): [
-  Media-X-Change,
-  Kluuu (jetzt https://voicerepublic.com),
-  Toroleo,
-  Headwalk,
-  Novacom,
-  5apps,
-  The Brettinghams,
-  Smava
+"Kunden (Auswahl)": [
+  "Media-X-Change",
+  "Kluuu (jetzt https://voicerepublic.com)",
+  "Toroleo",
+  "Headwalk",
+  "Novacom",
+  "5apps",
+  "The Brettinghams",
+  "Smava"
 ]
 
-Kenntnisse:
-  HTML: professionell
-  Javascript: professionell
-  JS Frameworks: [React, Backbone, Ember, jQuery, Handlebars, Lo-Dash / Underscore]#
-  JS Build Tools: [Grunt, Gulp, Webpack]
-  CSS: professionell
-  erweiterte CSS-Kenntnisse: [SASS, BEM, Styleguide Driven Development]
+"Coding Kenntnisse":
+  "HTML": "Experte"
+  "Javascript": "Experte"
+  "JS Frameworks": ["React", "Backbone", "Ember", "jQuery", "Handlebars", "Lo-Dash / Underscore"]#
+  "JS Build Tools": ["Grunt", "Gulp", "Webpack"]
+  "CSS": "Experte"
+  "erweiterte CSS-Kenntnisse": ["SASS", "BEM", "Styleguide Driven Development", "Responsive Design", "Progressive Enhancement"]
 
-Links: [
-  (Github)[https://github.com/pixelkritzel],
-  (Twitter)[https://twitter.com/pixelkritzel]
+"Soft Skills": [
+  "Scrum",
+  "Erfahrung in deutsch. und englischsprachigen Teams",
+  "Refactorings",
+  "Konzeption von Frontend-Architekturen",
+]
+
+"Links": [
+  "(Github)[https://github.com/pixelkritzel]",
+  "(Twitter)[https://twitter.com/pixelkritzel]"
 ]
