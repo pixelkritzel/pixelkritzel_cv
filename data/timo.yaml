@@ -1,0 +1,34 @@
+---
+Zur Person:
+  Name: Timo Zöller
+  Wohnort: Berlin
+
+Werdegang:
+  2002: Abitur am Gymnasium Loger Straße
+  2003-2004: Studium der Philosophie und Germanistik an **Universität Bremen**
+  2004-2010: Filmregie und Drehbuch Studium an der selbstorganisierten Filmschule **Filmarche e.V.**
+  2011-heute: Arbeit als freiberuflicher Frontend-Entwickler
+
+Kunden (Auswahl): [
+  Media-X-Change,
+  Kluuu (jetzt https://voicerepublic.com),
+  Toroleo,
+  Headwalk,
+  Novacom,
+  5apps,
+  The Brettinghams,
+  Smava
+]
+
+Kenntnisse:
+  HTML: professionell
+  Javascript: professionell
+  JS Frameworks: [React, Backbone, Ember, jQuery, Handlebars, Lo-Dash / Underscore]#
+  JS Build Tools: [Grunt, Gulp, Webpack]
+  CSS: professionell
+  erweiterte CSS-Kenntnisse: [SASS, BEM, Styleguide Driven Development]
+
+Links: [
+  (Github)[https://github.com/pixelkritzel],
+  (Twitter)[https://twitter.com/pixelkritzel]
+]
