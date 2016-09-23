@@ -1,3 +1,5 @@
+/* GLOBAL: console */
+
 var webpack = require('webpack-stream'),
     gulp = require('gulp'),
     sourcemaps = require('gulp-sourcemaps'),
@@ -6,7 +8,9 @@ var webpack = require('webpack-stream'),
     browserSync = require('browser-sync'),
     handlebars = require('handlebars'),
     gulpHandlebars = require('gulp-handlebars-html')(handlebars),
-    rename = require('gulp-rename');
+    rename = require('gulp-rename'),
+    yaml = require('js-yaml'),
+    fs   = require('fs');
 
 /* pathConfig*/
 var entryPoint = './src/scripts/index.js',
@@ -14,7 +18,8 @@ var entryPoint = './src/scripts/index.js',
     sassWatchPath = './src/styles/**/*.scss',
     jsWatchPath = './src/scripts/**/*.js',
     htmlWatchPath = './**/*.html',
-    hbsWatchPath = './src/templates/**/*.hbs';
+    hbsWatchPath = './src/templates/**/*.hbs',
+    yamlWatchPath = './src/data/**/*.yaml';
 /**/
 
 gulp.task('browser-sync', function () {
@@ -26,7 +31,15 @@ gulp.task('browser-sync', function () {
 });
 
 gulp.task('hbs', () => {
-  const data = {}; 
+  let data = {};
+  try {
+      data = yaml.safeLoad(fs.readFileSync('./src/data/timo.yaml', 'utf8'));
+      console.log('SUCCESS: data loaded');
+  } catch (e) {
+      console.log('ERROR');
+      console.log(e);
+  }
+
   const options = {
       partialsDirectory : ['./src/templates/html/partials']
   };
@@ -70,7 +83,7 @@ gulp.task('sass', function () {
 gulp.task('watch', function () {
     gulp.watch(jsWatchPath, ['js']);
     gulp.watch(sassWatchPath, ['sass']);
-    gulp.watch(hbsWatchPath, ['hbs']);
+    gulp.watch([yamlWatchPath, hbsWatchPath], ['hbs']);
     gulp.watch(htmlWatchPath, function () {
         return gulp.src('')
             .pipe(browserSync.reload({stream: true}))
