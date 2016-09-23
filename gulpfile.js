@@ -3,14 +3,18 @@ var webpack = require('webpack-stream'),
     sourcemaps = require('gulp-sourcemaps'),
     sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
-    browserSync = require('browser-sync');
+    browserSync = require('browser-sync'),
+    handlebars = require('handlebars'),
+    gulpHandlebars = require('gulp-handlebars-html')(handlebars),
+    rename = require('gulp-rename');
 
 /* pathConfig*/
 var entryPoint = './src/scripts/index.js',
     browserDir = './',
     sassWatchPath = './src/styles/**/*.scss',
     jsWatchPath = './src/scripts/**/*.js',
-    htmlWatchPath = './**/*.html';
+    htmlWatchPath = './**/*.html',
+    hbsWatchPath = './src/templates/**/*.hbs';
 /**/
 
 gulp.task('browser-sync', function () {
@@ -19,6 +23,17 @@ gulp.task('browser-sync', function () {
     };
 
     return browserSync(config);
+});
+
+gulp.task('hbs', () => {
+  const data = {}; 
+  const options = {
+      partialsDirectory : ['./src/templates/html/partials']
+  };
+  return gulp.src('./src/templates/html/index.hbs')
+             .pipe(gulpHandlebars(data, options))
+             .pipe(rename('index.html'))
+             .pipe(gulp.dest('.'));
 });
 
 gulp.task('js', function () {
@@ -55,10 +70,11 @@ gulp.task('sass', function () {
 gulp.task('watch', function () {
     gulp.watch(jsWatchPath, ['js']);
     gulp.watch(sassWatchPath, ['sass']);
+    gulp.watch(hbsWatchPath, ['hbs']);
     gulp.watch(htmlWatchPath, function () {
         return gulp.src('')
             .pipe(browserSync.reload({stream: true}))
     });
 });
 
-gulp.task('run', ['js', 'sass', 'watch', 'browser-sync']);
+gulp.task('run', ['hbs', 'js', 'sass', 'watch', 'browser-sync']);
