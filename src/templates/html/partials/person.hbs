@@ -1,0 +1,7 @@
+<h2>{{ person.title }}</h2>
+<dl>
+  {{#iterateObject "person" this}}
+    <dt>{{key}}</dt>
+    <dd>{{value}}</dd>
+  {{/iterateObject}}
+</dl>

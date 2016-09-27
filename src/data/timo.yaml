@@ -1,42 +1,50 @@
 ---
-person: Timo
-"Zur Person":
+person:
+  title: "Zur Person"
   "Name": "Timo Zöller"
   "Wohnort": "Berlin"
 
-"Werdegang":
+development:
+  title: "Werdegang"
   "2002": "Abitur am Gymnasium Loger Straße"
   "2003-2004": "Studium der Philosophie und Germanistik an **Universität Bremen**"
   "2004-2010": "Filmregie und Drehbuch Studium an der selbstorganisierten Filmschule **Filmarche e.V.**"
   "2011-heute": "Arbeit als freiberuflicher Frontend-Entwickler"
 
-"Kunden (Auswahl)": [
-  "Media-X-Change",
-  "Kluuu (jetzt https://voicerepublic.com)",
-  "Toroleo",
+customers:
+  title: "Kunden (Auswahl)"
+  list: [
+  "[Media-X-Change](http://media-x-change.de/)",
+  "Kluuu (jetzt [Voice Republic](https://voicerepublic.com))",
+  "Toroleo (jetzt [Reifen.de](http://www.reifen.de/))",
   "Headwalk",
-  "Novacom",
-  "5apps",
-  "The Brettinghams",
-  "Smava"
+  "[Novacom](https://www.novacom.eu/)",
+  "[5apps](https://5apps.com/)",
+  "[The Brettinghams](http://www.brettingham.de/)",
+  "[Smava](https://www.smava.de/)"
 ]
 
-"Coding Kenntnisse":
+coding:
+  title: "Coding Kenntnisse" 
   "HTML": "Experte"
   "Javascript": "Experte"
-  "JS Frameworks": ["React", "Backbone", "Ember", "jQuery", "Handlebars", "Lo-Dash / Underscore"]#
+  "JS Frameworks": ["React", "Backbone", "Ember", "jQuery", "Handlebars", "Lo-Dash / Underscore"]
   "JS Build Tools": ["Grunt", "Gulp", "Webpack"]
   "CSS": "Experte"
   "erweiterte CSS-Kenntnisse": ["SASS", "BEM", "Styleguide Driven Development", "Responsive Design", "Progressive Enhancement"]
 
-"Soft Skills": [
+soft-skills: 
+ title: "Soft Skills"
+ list: [
   "Scrum",
-  "Erfahrung in deutsch. und englischsprachigen Teams",
+  "Erfahrung in deutsch- und englischsprachigen Teams",
   "Refactorings",
   "Konzeption von Frontend-Architekturen",
 ]
 
-"Links": [
-  "(Github)[https://github.com/pixelkritzel]",
-  "(Twitter)[https://twitter.com/pixelkritzel]"
+links: 
+  title: "Links"
+  list: [
+  "[Github](https://github.com/pixelkritzel)",
+  "[Twitter](https://twitter.com/pixelkritzel)"
 ]

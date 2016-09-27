@@ -1,0 +1,6 @@
+<h2>{{ customers.title }}</h2>
+ <ul>
+{{#each customers.list as |customer| }}
+  <li>{{{m customer}}}</li>
+{{/each}}
+</ul>

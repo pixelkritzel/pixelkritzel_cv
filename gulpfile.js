@@ -1,5 +1,7 @@
 /* GLOBAL: console */
 
+require('./handlebars-helpers')();
+
 var webpack = require('webpack-stream'),
     gulp = require('gulp'),
     sourcemaps = require('gulp-sourcemaps'),
