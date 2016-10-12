@@ -1,17 +1,19 @@
-<h2>{{ coding.title }}</h2>
-<dl>
-  {{#iterateObject "coding" this}}
-    <dt>{{ key }}</dt>
-    <dd>{{{m value }}}</dd>
-  {{!-- Ergo, if value is iterable --}}
-  {{else}}
-    <dt class="buzzwords-defintion">{{ key }}</dt>
-    <dd>
-      <ul class="buzzwords">
-        {{#each arr as |value|}}
-          <li>{{{m value}}}</li>
-        {{/each}}
-      </ul>
-    </dd>
-  {{/iterateObject}}
-</dl>
+<section>
+  <h2>{{ coding.title }}</h2>
+  <dl>
+    {{#iterateObject "coding" this}}
+      <dt>{{ key }}</dt>
+      <dd>{{{m value }}}</dd>
+    {{!-- Ergo, if value is iterable --}}
+    {{else}}
+      <dt class="buzzwords-defintion">{{ key }}</dt>
+      <dd>
+        <ul class="buzzwords">
+          {{#each arr as |value|}}
+            <li>{{{m value}}}</li>
+          {{/each}}
+        </ul>
+      </dd>
+    {{/iterateObject}}
+  </dl>
+</section>

@@ -3,8 +3,22 @@
 }
 
 .container {
-  max-width: 80%;
+  max-width: 1024px;
+  padding: $vertical-rhythm;
   margin: 10vh auto;
+
+  @include respond-to(phone) {
+    margin-top: 0;
+  } 
+
+  & > section {
+    margin-bottom: $vertical-rhythm * 2;
+  }
+}
+
+h2 {
+  margin-top: $vertical-rhythm;
+  margin-bottom: $vertical-rhythm;
 }
 
 dl {

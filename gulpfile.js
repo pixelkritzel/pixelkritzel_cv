@@ -16,12 +16,13 @@ var webpack = require('webpack-stream'),
 
 /* pathConfig*/
 var entryPoint = './src/scripts/index.js',
-    browserDir = './',
+    browserDir = './build',
     sassWatchPath = './src/styles/**/*.scss',
     jsWatchPath = './src/scripts/**/*.js',
     htmlWatchPath = './**/*.html',
     hbsWatchPath = './src/templates/**/*.hbs',
-    yamlWatchPath = './src/data/**/*.yaml';
+    yamlWatchPath = './src/data/**/*.yaml',
+    staticPath = './src/static';
 /**/
 
 gulp.task('browser-sync', function () {
@@ -48,7 +49,7 @@ gulp.task('hbs', () => {
   return gulp.src('./src/templates/html/index.hbs')
              .pipe(gulpHandlebars(data, options))
              .pipe(rename('index.html'))
-             .pipe(gulp.dest('.'));
+             .pipe(gulp.dest(browserDir));
 });
 
 gulp.task('js', function () {
@@ -82,14 +83,20 @@ gulp.task('sass', function () {
     .pipe(browserSync.reload({stream: true}));
 });
 
+gulp.task('copyStatic', function() {
+    return gulp.src(staticPath + '/**/*')
+               .pipe(gulp.dest('./build/static'));
+});
+
 gulp.task('watch', function () {
     gulp.watch(jsWatchPath, ['js']);
     gulp.watch(sassWatchPath, ['sass']);
     gulp.watch([yamlWatchPath, hbsWatchPath], ['hbs']);
+    gulp.watch(staticPath + '/**/*', ['copyStatic']);
     gulp.watch(htmlWatchPath, function () {
         return gulp.src('')
-            .pipe(browserSync.reload({stream: true}))
+            .pipe(browserSync.reload({stream: true}));
     });
 });
 
-gulp.task('run', ['hbs', 'js', 'sass', 'watch', 'browser-sync']);
+gulp.task('run', ['hbs', 'js', 'sass', 'copyStatic', 'watch', 'browser-sync']);
