@@ -1,0 +1,16 @@
+@mixin respond-to($medias...) {
+  @each $media in $medias {
+    @if $media == phone {
+      @media only screen and (max-device-width: 736px) { @content; }
+    }
+    @else if $media == not_phone {
+      @media only screen and (min-device-width: 737px) { @content; }
+    }
+    @else if $media == print {
+    @media only print { @content; }
+    }
+    @else if $media == screen {
+      @media only screen { @content }
+    }
+  }
+}

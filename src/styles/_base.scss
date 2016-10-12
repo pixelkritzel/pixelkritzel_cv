@@ -1,0 +1,36 @@
+html {
+  background-color: $background-color;
+  color: $text-color;
+  font-family: 'Lato', sans-serif;
+
+  @include respond-to(print) {
+    background: none;
+    color: black;
+  }
+}
+
+body {
+  font-size: $font-size;
+  line-height: $line-height;
+
+  @include respond-to(print) {
+    font-size: 1rem;
+  }
+}
+
+/* Because Markdown injects <p>'s everywhere */
+p {
+  margin: 0;
+}
+
+a {
+  color: $link-color;
+
+  &:visited {
+    color: $link-color-visited;
+  }
+
+  &:active, &:hover {
+    color: $link-color-active;
+  }
+}

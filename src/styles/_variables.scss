@@ -1,0 +1,12 @@
+$font-size: 1.1rem;
+$one-pixel-in-rem: $font-size / 17.6;
+$line-height: 1.4;
+
+$vertical-rhythm: $font-size * $line-height / 2;
+
+$background-color: #44537F;
+$text-color: #E5ECFF;
+
+$link-color: #e87b12;
+$link-color-active: lighten($link-color, 10%);
+$link-color-visited: darken($link-color, 10%);

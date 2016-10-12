@@ -1,4 +1,5 @@
 ---
+title: "Frontend Developer Timo Zöller"
 person:
   title: "Zur Person"
   "Name": "Timo Zöller"
@@ -6,10 +7,10 @@ person:
 
 development:
   title: "Werdegang"
-  "2002": "Abitur am Gymnasium Loger Straße"
-  "2003-2004": "Studium der Philosophie und Germanistik an **Universität Bremen**"
-  "2004-2010": "Filmregie und Drehbuch Studium an der selbstorganisierten Filmschule **Filmarche e.V.**"
-  "2011-heute": "Arbeit als freiberuflicher Frontend-Entwickler"
+  "2002": "Abitur am *Gymnasium Loger Straße* in Osterholz-Scharmbeck"
+  "2003 - 2004": "Studium der Philosophie und Germanistik an *Universität Bremen*"
+  "2004 - 2010": "Studium der Filmregie und Drehbuch an der selbstorganisierten Filmschule *Filmarche e.V.*"
+  "2011 - heute": "Arbeit als freiberuflicher Frontend-Entwickler"
 
 customers:
   title: "Kunden (Auswahl)"
@@ -25,15 +26,15 @@ customers:
 ]
 
 coding:
-  title: "Coding Kenntnisse" 
+  title: "Coding Kenntnisse"
   "HTML": "Experte"
   "Javascript": "Experte"
   "JS Frameworks": ["React", "Backbone", "Ember", "jQuery", "Handlebars", "Lo-Dash / Underscore"]
   "JS Build Tools": ["Grunt", "Gulp", "Webpack"]
   "CSS": "Experte"
-  "erweiterte CSS-Kenntnisse": ["SASS", "BEM", "Styleguide Driven Development", "Responsive Design", "Progressive Enhancement"]
+  "CSS-Buzzwords": ["SASS", "BEM", "Styleguide Driven Development", "Responsive Design", "Progressive Enhancement"]
 
-soft-skills: 
+soft-skills:
  title: "Soft Skills"
  list: [
   "Scrum",
@@ -42,7 +43,7 @@ soft-skills:
   "Konzeption von Frontend-Architekturen",
 ]
 
-links: 
+links:
   title: "Links"
   list: [
   "[Github](https://github.com/pixelkritzel)",

@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 80%;
+  margin: 10vh auto;
+}
+
+dl {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+
+  @include respond-to(phone) {
+    display: block;
+  }
+
+  dt, dd {
+    margin: 0;
+    margin-bottom: $vertical-rhythm;
+  }
+
+  dt {
+    width: 35%;
+    @include respond-to(phone) {
+      font-weight: 900;
+      width: auto;
+      margin-bottom: 0;
+    }
+  }
+
+  dd {
+    width: 65%;
+    @include respond-to(phone) {
+      width: auto;
+    }
+  }
+}

@@ -1,0 +1,57 @@
+.unstyled-list {
+  margin: 0;
+  padding: 0;
+  li {
+    /* Did I mention Marked annoying behavior of injecting <p>'s ? */
+    &, & > p {
+      display: inline;
+    }
+
+    &:after {
+      display: inline;
+      content: ",";
+      margin-left: -2px;
+      margin-right: 4px;
+    }
+
+    &:last-child:after {
+      content: "";
+    }
+  }
+}
+
+.buzzwords-defintion {
+  @include respond-to(not_phone) {
+    margin-top: $vertical-rhythm / 2;
+  }
+}
+
+.buzzwords {
+  margin: 0;
+  padding: 0;
+  li {
+    @include respond-to(not_phone) {
+      display: inline-block;
+      margin-bottom: $vertical-rhythm / 2;
+      padding: ($vertical-rhythm / 2 - $one-pixel-in-rem ) ($vertical-rhythm - $one-pixel-in-rem);
+      background-color: rgba(255,255,255, .1);
+      border: $one-pixel-in-rem rgba(255,255,255, .2) solid;
+    }
+
+    @include respond-to(phone, print) {
+      /* Did I mention Marked annoying behavior of injecting <p>'s ? */
+      &, & > p {
+        display: inline;
+      }
+
+      &:after {
+        display: inline;
+        content: ", ";
+      }
+
+      &:last-child:after {
+        content: "";
+      }
+    }
+  }
+}

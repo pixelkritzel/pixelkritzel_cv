@@ -5,9 +5,9 @@
     <dd>{{{m value }}}</dd>
   {{!-- Ergo, if value is iterable --}}
   {{else}}
-    <dt>{{ key }}</dt>
+    <dt class="buzzwords-defintion">{{ key }}</dt>
     <dd>
-      <ul>
+      <ul class="buzzwords">
         {{#each arr as |value|}}
           <li>{{{m value}}}</li>
         {{/each}}
