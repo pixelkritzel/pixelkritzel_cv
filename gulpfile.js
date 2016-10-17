@@ -34,10 +34,19 @@ gulp.task('browser-sync', function () {
 });
 
 gulp.task('hbs', () => {
-  let data = {};
+  let data = Object.create(null);
+  let stream;
   try {
-      data = yaml.safeLoad(fs.readFileSync('./src/data/timo.yaml', 'utf8'));
-      console.log('SUCCESS: data loaded');
+      data.de = yaml.safeLoad(fs.readFileSync('./src/data/timo_de.yaml', 'utf8'));
+      console.log('SUCCESS: German data loaded');
+  } catch (e) {
+      console.log('ERROR');
+      console.log(e);
+  }
+
+  try {
+      data.en = yaml.safeLoad(fs.readFileSync('./src/data/timo_en.yaml', 'utf8'));
+      console.log('SUCCESS: English data loaded');
   } catch (e) {
       console.log('ERROR');
       console.log(e);
@@ -46,10 +55,15 @@ gulp.task('hbs', () => {
   const options = {
       partialsDirectory : ['./src/templates/html/partials']
   };
-  return gulp.src('./src/templates/html/index.hbs')
-             .pipe(gulpHandlebars(data, options))
-             .pipe(rename('index.html'))
-             .pipe(gulp.dest(browserDir));
+  for (let key in data) {
+    const languageExtension = key === 'en' ? '_en' : '';
+    data[key].languageExtension = languageExtension;
+    stream = gulp.src('./src/templates/html/index.hbs')
+                 .pipe(gulpHandlebars(data[key], options))
+                 .pipe(rename(`index${languageExtension}.html`))
+                 .pipe(gulp.dest(browserDir));
+  }
+  return stream;
 });
 
 gulp.task('js', function () {

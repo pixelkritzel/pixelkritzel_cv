@@ -5,7 +5,7 @@
 .container {
   max-width: 1024px;
   padding: $vertical-rhythm;
-  margin: 10vh auto;
+  margin: 8vh auto 10vh;
 
   @include respond-to(phone) {
     margin-top: 0;

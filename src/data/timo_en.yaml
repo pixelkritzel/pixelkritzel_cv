@@ -1,0 +1,61 @@
+---
+title: "Javascript Developer Timo Zöller"
+introduction: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+imagePath: "/static/images/timo.jpg"
+
+person:
+  title: "Personal details"
+  "Name": "Timo Zöller"
+  "Place of residence": "Berlin"
+
+development:
+  title: "Educational and professional background"
+  "2002": "Abitur from *Gymnasium Loger Straße* in Osterholz-Scharmbeck"
+  "2003 - 2004": "Studies of philosophy and German philology at *Universität Bremen*"
+  "2004 - 2010": "Studies of film directing and screenwriting at *Filmarche e.V.*"
+  "2011 - heute": "Working as freelance developer"
+
+customers:
+  title: "Selected customer"
+  list: [
+  "[Media-X-Change](http://media-x-change.de/)",
+  "Kluuu (now [Voice Republic](https://voicerepublic.com))",
+  "Toroleo (now [Reifen.de](http://www.reifen.de/))",
+  "Headwalk",
+  "[Novacom](https://www.novacom.eu/)",
+  "[5apps](https://5apps.com/)",
+  "[The Brettinghams](http://www.brettingham.de/)",
+  "[Smava](https://www.smava.de/)"
+]
+
+coding:
+  title: "Coding"
+  "HTML": "Expert"
+  "Javascript": "Expert"
+  "JS frameworks": ["React", "Backbone", "Ember", "jQuery", "Handlebars", "Lo-Dash / Underscore"]
+  "JS build tools": ["Grunt", "Gulp", "Webpack"]
+  "CSS": "Expert"
+  "CSS buzzwords": ["SASS", "BEM", "Styleguide Driven Development", "Responsive Design", "Progressive Enhancement"]
+
+soft-skills:
+ title: "Soft skills"
+ list: [
+  "Scrum",
+  "Experience in English and German speaking teams",
+  "Refactorings",
+  "Conception of frontend architectures",
+]
+
+links:
+  title: "Links"
+  list: [
+  "[Github](https://github.com/pixelkritzel)",
+  "[Twitter](https://twitter.com/pixelkritzel)",
+  "[Xing](https://www.xing.com/profile/Timo_Zoeller2)",
+  "[Blog](https://blog.pixelkritzel.de)"
+]
