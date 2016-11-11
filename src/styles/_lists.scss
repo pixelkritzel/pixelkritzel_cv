@@ -2,20 +2,14 @@
   margin: 0;
   padding: 0;
   li {
-    /* Did I mention Marked annoying behavior of injecting <p>'s ? */
-    &, & > p {
+    & {
       display: inline;
     }
 
     &:after {
       display: inline;
-      content: ",";
       margin-left: -2px;
       margin-right: 4px;
-    }
-
-    &:last-child:after {
-      content: "";
     }
   }
 }
@@ -39,8 +33,7 @@
     }
 
     @include respond-to(phone, print) {
-      /* Did I mention Marked annoying behavior of injecting <p>'s ? */
-      &, & > p {
+      & {
         display: inline;
       }
 
