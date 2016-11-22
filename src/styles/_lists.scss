@@ -7,15 +7,8 @@
       display: inline;
     }
 
-    &:after {
-      display: inline;
-      content: ",";
-      margin-left: -2px;
-      margin-right: 4px;
-    }
-
-    &:last-child:after {
-      content: "";
+    &:last-child .unstyled-list-comma {
+      display: none;
     }
   }
 }
