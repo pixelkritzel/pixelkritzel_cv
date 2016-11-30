@@ -1,6 +1,14 @@
 const Handlebars = require('handlebars');
 const marked = require('marked');
+const markedRenderer = new marked.Renderer();
 
+markedRenderer.paragraph = function(text) {
+  return text;
+};
+
+marked.setOptions({
+  renderer: markedRenderer
+});
 
 module.exports = () => {
   Handlebars.registerHelper('iterateObject', function(title, context, options) {

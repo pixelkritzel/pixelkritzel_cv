@@ -18,11 +18,6 @@ body {
   }
 }
 
-/* Because Markdown injects <p>'s everywhere */
-p {
-  margin: 0;
-}
-
 a {
   color: $link-color;
 
