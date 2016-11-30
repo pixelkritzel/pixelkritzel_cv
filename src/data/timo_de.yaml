@@ -7,6 +7,9 @@ person:
   title: "Zur Person"
   "Name": "Timo Zöller"
   "Wohnort": "Berlin"
+  "Adresse": "Kiehlufer 125<br />12059 Berlin"
+  "Telefon": "+49 171 150 555 7"
+  "Email": "timo@pixelkritzel.de"
 
 development:
   title: "Werdegang"
@@ -14,6 +17,12 @@ development:
   "2003 - 2004": "Studium der Philosophie und Germanistik an *Universität Bremen*"
   "2004 - 2010": "Studium der Filmregie und Drehbuch an der selbstorganisierten Filmschule *Filmarche e.V.*"
   "2011 - heute": "Arbeit als freiberuflicher Frontend-Entwickler"
+
+selected-projects:
+  title: "Ausgewählte Projekte"
+  "2013": "**Toroleo**<br />Achitektur, Prozessentwicklung und Coding (HTML, CSS, jQuery) für eine Neuentwicklung des Frontend auf Basis eines *Living Styleguides*"
+  "2013-2015": "**Novacom**<br />Architektur, Umsetzung und Designweiterentwicklung und Neuentwicklung des Frontends einer bestehenden großen Applikation. Dabei wurde Wert darauf gelegt, dass der Frontend-Code in Form eines Styleguides so dokumentiert wird, dass die vorhandenen Backend-Entwickler kein Javascript oder CSS beherrschen müssen. Die komplette Konfiguration des Frontends musste mit Hilfe von HTML geschehen. Am Besten vergleichen ließe es sich damit, dass ich so etwas wie in firmeninternes Twitter Bootstrap entwickelt habe. Die Brwoser-Unterstützung reichte bis zum IE8 herunter. Dazu kamen mehrere Backbone-Komponenten, maßgeschneiderte jQuery-Plugins und eine Ember.js Mobile App. Verwendete Technologien: HTML, CSS, Javascript, jQuery, Jasmine, Grunt, Backbone.js, Ember.js"
+  "2015-2016": "**Smava**<br />Mitarbeit in einem agilen Team bei der Neuentwicklung eines internen Tools in Backbone.js"
 
 customers:
   title: "Kunden (Auswahl)"

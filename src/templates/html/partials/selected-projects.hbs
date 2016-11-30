@@ -1,0 +1,9 @@
+<section>
+  <h2>{{ selected-projects.title }}</h2>
+  <dl>
+    {{#iterateObject "selected-projects" this}}
+      <dt>{{key}}</dt>
+      <dd>{{{m value}}}</dd>
+    {{/iterateObject}}
+  </dl>
+</section>
