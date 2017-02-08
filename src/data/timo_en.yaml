@@ -15,6 +15,12 @@ development:
   "2004 - 2010": "Studies of film directing and screenwriting at *Filmarche e.V.*"
   "2011 - heute": "Working as freelance developer"
 
+ selected-projects:
+  title: "Selected projects"
+  "2013": "**Toroleo**<br />Architecture, process development and implementation (HTML, CSS, jQuery) of a frontend rewrite based on a *living styleguide"
+  "2013-2015": "**Novacom**<br />Architecture, implementation and design development for the new implementation of a big existing application. One main concern was the documentation of the frontend in form of a *living styleguide*  enabling backend developers to use it without any further knowledge of HTML or CSS. The frontend components had to be completely configurable by a HTML-API. The best comparision would be that I developed something similar to a company tailored Twitter Bootstrap. The browser support had to involve the IE8. Further I developed Backbone.js components, custom jQuery-Plugins and a mobile Ember.js app.<br />Technologies: HTML, CSS, Javascript, jQuery, Jasmine, Grunt, Backbone.js, Ember.js"
+  "2015-2016": "**Smava**<br />Working in an agile team for the new implementation of a huge internal tool using Backbone.js and Marionette.js" 
+
 customers:
   title: "Selected customer"
   list: [
