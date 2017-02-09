@@ -33,6 +33,13 @@
 
     @include respond-to(phone, print) {
       /* Did I mention Marked annoying behavior of injecting <p>'s ? */
+      & {
+        margin-bottom: 0;
+        padding: 0;
+        background-color: inherit;
+        border: none;
+      }
+      
       &, & > p {
         display: inline;
       }
