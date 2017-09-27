@@ -3,45 +3,48 @@
 require('./handlebars-helpers')();
 
 var webpack = require('webpack-stream'),
-    gulp = require('gulp'),
-    sourcemaps = require('gulp-sourcemaps'),
-    sass = require('gulp-sass'),
-    autoprefixer = require('gulp-autoprefixer'),
-    browserSync = require('browser-sync'),
-    handlebars = require('handlebars'),
-    gulpHandlebars = require('gulp-handlebars-html')(handlebars),
-    rename = require('gulp-rename'),
-    yaml = require('js-yaml'),
-    fs   = require('fs'),
-    inject = require('gulp-inject'),
-    uglify = require('gulp-uglify'),
-    del = require('del'),
-    cleanCSS = require('gulp-clean-css'),
-    favicons = require('gulp-favicons');
+  gulp = require('gulp'),
+  sourcemaps = require('gulp-sourcemaps'),
+  sass = require('gulp-sass'),
+  autoprefixer = require('gulp-autoprefixer'),
+  browserSync = require('browser-sync'),
+  handlebars = require('handlebars'),
+  gulpHandlebars = require('gulp-handlebars-html')(handlebars),
+  rename = require('gulp-rename'),
+  yaml = require('js-yaml'),
+  fs = require('fs'),
+  inject = require('gulp-inject'),
+  uglify = require('gulp-uglify'),
+  del = require('del'),
+  cleanCSS = require('gulp-clean-css'),
+  favicons = require('gulp-favicons');
 
 /* pathConfig*/
 var entryPoint = './src/scripts/index.js',
-    browserDir = './build',
-    sassWatchPath = './src/styles/**/*.scss',
-    jsWatchPath = './src/scripts/**/*.js',
-    htmlWatchPath = './**/*.html',
-    hbsWatchPath = './src/templates/**/*.hbs',
-    yamlWatchPath = './src/data/**/*.yaml',
-    staticPath = './src/static';
+  browserDir = './build',
+  sassWatchPath = './src/styles/**/*.scss',
+  jsWatchPath = './src/scripts/**/*.js',
+  htmlWatchPath = './**/*.html',
+  hbsWatchPath = './src/templates/**/*.hbs',
+  yamlWatchPath = './src/data/**/*.yaml',
+  staticPath = './src/static';
 /**/
 // First of all delete any old build directory
 del.sync(browserDir);
 
-gulp.task('browser-sync', function () {
-    const config = {
-        server: {baseDir: browserDir}
-    };
+gulp.task('browser-sync', function() {
+  const config = {
+    server: { baseDir: browserDir }
+  };
 
-    return browserSync(config);
+  return browserSync(config);
 });
 
-gulp.task('favicons', function () {
-    return gulp.src('./favicon.png').pipe(favicons({
+gulp.task('favicons', function() {
+  return gulp
+    .src('./favicon.png')
+    .pipe(
+      favicons({
         appName: 'Javascript Developer Timo Zöller',
         developerName: 'Timo Zoeller',
         background: '#020307',
@@ -55,122 +58,143 @@ gulp.task('favicons', function () {
         html: '../favicons.html',
         pipeHTML: true,
         replace: true
-    }))
+      })
+    )
     .pipe(gulp.dest(`${browserDir}/favicons`));
 });
 
 gulp.task('inject-favicon', ['favicons', 'hbs'], function() {
-  gulp.src([`${browserDir}/index.html`, `${browserDir}/index_en.html`])
-  .pipe(inject(gulp.src([`${browserDir}/favicons.html`]), {
-    starttag: '<!-- inject:head:html -->',
-    transform: function(filePath, file) {
-        console.log()
-      return file.contents.toString('utf8'); // return file contents as string
-    }
-  }))
-  .pipe(gulp.dest(browserDir));
+  gulp
+    .src([`${browserDir}/index.html`, `${browserDir}/index_en.html`])
+    .pipe(
+      inject(gulp.src([`${browserDir}/favicons.html`]), {
+        starttag: '<!-- inject:head:html -->',
+        transform: function(filePath, file) {
+          return file.contents.toString('utf8'); // return file contents as string
+        }
+      })
+    )
+    .pipe(gulp.dest(browserDir));
 });
 
 gulp.task('hbs', () => {
   let data = Object.create(null);
   let stream;
   try {
-      data.de = yaml.safeLoad(fs.readFileSync('./src/data/timo_de.yaml', 'utf8'));
-      console.log('SUCCESS: German data loaded');
+    data.de = yaml.safeLoad(fs.readFileSync('./src/data/timo_de.yaml', 'utf8'));
+    console.log('SUCCESS: German data loaded');
   } catch (e) {
-      console.log('ERROR');
-      console.log(e);
+    console.log('ERROR');
+    console.log(e);
   }
 
   try {
-      data.en = yaml.safeLoad(fs.readFileSync('./src/data/timo_en.yaml', 'utf8'));
-      console.log('SUCCESS: English data loaded');
+    data.en = yaml.safeLoad(fs.readFileSync('./src/data/timo_en.yaml', 'utf8'));
+    console.log('SUCCESS: English data loaded');
   } catch (e) {
-      console.log('ERROR');
-      console.log(e);
+    console.log('ERROR');
+    console.log(e);
   }
 
   const options = {
-      partialsDirectory : ['./src/templates/html/partials']
+    partialsDirectory: ['./src/templates/html/partials']
   };
   for (let key in data) {
     const languageExtension = key === 'en' ? '_en' : '';
     data[key].languageExtension = languageExtension;
-    stream = gulp.src('./src/templates/html/index.hbs')
-                 .pipe(gulpHandlebars(data[key], options))
-                 .pipe(rename(`index${languageExtension}.html`))
-                 .pipe(gulp.dest(browserDir));
+    stream = gulp
+      .src('./src/templates/html/index.hbs')
+      .pipe(gulpHandlebars(data[key], options))
+      .pipe(rename(`index${languageExtension}.html`))
+      .pipe(gulp.dest(browserDir));
   }
   return stream;
 });
 
-gulp.task('js', function () {
-
-    return gulp.src(entryPoint)
-               .pipe(webpack({
-                    watch: true,
-                    devtool: 'source-map',
-                    module: {
-                        loaders: [
-                            { test: /\.js$/, loader: 'babel' },
-                        ],
-                    },
-                    output: {
-                        filename: 'bundle.js'
-                    }
-               }))
-               .pipe(gulp.dest('./build/scripts'))
-               .on('data', () => browserSync.reload());
+gulp.task('js', function() {
+  return gulp
+    .src(entryPoint)
+    .pipe(
+      webpack({
+        watch: true,
+        devtool: 'source-map',
+        module: {
+          loaders: [{ test: /\.js$/, loader: 'babel' }]
+        },
+        output: {
+          filename: 'bundle.js'
+        }
+      })
+    )
+    .pipe(gulp.dest('./build/scripts'))
+    .on('data', () => browserSync.reload());
 });
 
-gulp.task('sass', function () {
-  return gulp.src(sassWatchPath)
+gulp.task('sass', function() {
+  return gulp
+    .src(sassWatchPath)
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
-    .pipe(autoprefixer({
+    .pipe(
+      autoprefixer({
         browsers: ['last 2 versions']
-    }))
+      })
+    )
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('./build/styles'))
-    .pipe(browserSync.reload({stream: true}));
+    .pipe(browserSync.reload({ stream: true }));
 });
 
 gulp.task('copyStatic', function() {
-    return gulp.src(staticPath + '/**/*')
-               .pipe(gulp.dest('./build/static'));
+  return gulp.src(staticPath + '/**/*').pipe(gulp.dest('./build/static'));
 });
 
-gulp.task('watch', function () {
-    gulp.watch(jsWatchPath, ['js']);
-    gulp.watch(sassWatchPath, ['sass']);
-    gulp.watch([yamlWatchPath, hbsWatchPath], ['hbs']);
-    gulp.watch(staticPath + '/**/*', ['copyStatic']);
-    gulp.watch(htmlWatchPath, function () {
-        return gulp.src('')
-            .pipe(browserSync.reload({stream: true}));
-    });
+gulp.task('watch', function() {
+  gulp.watch(jsWatchPath, ['js']);
+  gulp.watch(sassWatchPath, ['sass']);
+  gulp.watch([yamlWatchPath, hbsWatchPath], ['hbs']);
+  gulp.watch(staticPath + '/**/*', ['copyStatic']);
+  gulp.watch(htmlWatchPath, function() {
+    return gulp.src('').pipe(browserSync.reload({ stream: true }));
+  });
 });
 
-
-gulp.task('compress-js', ['js'], function () {
+gulp.task('compress-js', ['js'], function() {
   fs.rename(`${browserDir}/scripts/bundle.js`, `${browserDir}/scripts/bundle.tmp.js`, err => err && console.log(err));
-  return gulp.src(`${browserDir}/scripts/bundle.tmp.js`)
-             .pipe(uglify())
-             .pipe(rename('bundle.js'))
-             .pipe(gulp.dest(`${browserDir}/scripts`));
+  return gulp
+    .src(`${browserDir}/scripts/bundle.tmp.js`)
+    .pipe(uglify())
+    .pipe(rename('bundle.js'))
+    .pipe(gulp.dest(`${browserDir}/scripts`));
 });
 
-gulp.task('compress-css', ['sass'], function () {
+gulp.task('compress-css', ['sass'], function() {
   fs.rename(`${browserDir}/styles/style.css`, `${browserDir}/styles/style.tmp.css`, err => err && console.log(err));
-  return gulp.src(`${browserDir}/styles/style.tmp.css`)
-             .pipe(cleanCSS())
-             .pipe(rename('style.css'))
-             .pipe(gulp.dest(`${browserDir}/styles`));
+  return gulp
+    .src(`${browserDir}/styles/style.tmp.css`)
+    .pipe(cleanCSS())
+    .pipe(rename('style.css'))
+    .pipe(gulp.dest(`${browserDir}/styles`));
 });
 
-gulp.task('cleanup', ['compress-js', 'inject-favicon'], () => 
-    del([`${browserDir}/scripts/bundle.tmp.js`, `${browserDir}/scripts/bundle.js.map`, `${browserDir}/favicons.html`, `${browserDir}/styles/style.tmp.css`])
+gulp.task('cleanup', ['compress-js', 'inject-favicon'], () =>
+  del([
+    `${browserDir}/scripts/bundle.tmp.js`,
+    `${browserDir}/scripts/bundle.js.map`,
+    `${browserDir}/favicons.html`,
+    `${browserDir}/styles/style.tmp.css`
+  ])
 );
 
 gulp.task('run', ['hbs', 'js', 'sass', 'copyStatic', 'watch', 'browser-sync']);
-gulp.task('build', ['hbs', 'favicons', 'inject-favicon', 'js', 'compress-js', 'sass', 'compress-css', 'copyStatic', 'cleanup']);
+gulp.task('build', [
+  'hbs',
+  'favicons',
+  'inject-favicon',
+  'js',
+  'compress-js',
+  'sass',
+  'compress-css',
+  'copyStatic',
+  'cleanup'
+]);
