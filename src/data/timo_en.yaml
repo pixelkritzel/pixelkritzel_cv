@@ -22,7 +22,7 @@ selected-projects:
   "2015-2016": "**Smava**<br />Working in an agile team for the new implementation of a huge internal tool using Backbone.js and Marionette.js" 
 
 customers:
-  title: "Selected customer"
+  title: "Customers"
   list: [
   "[Media-X-Change](http://media-x-change.de/)",
   "Kluuu (now [Voice Republic](https://voicerepublic.com))",
@@ -31,7 +31,8 @@ customers:
   "[Novacom](https://www.novacom.eu/)",
   "[5apps](https://5apps.com/)",
   "[The Brettinghams](http://www.brettingham.de/)",
-  "[Smava](https://www.smava.de/)"
+  "[Smava](https://www.smava.de/)",
+  "[Unit-B Technology](https://www.unitb-technology.de/)"
 ]
 
 coding:
