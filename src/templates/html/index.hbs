@@ -1,27 +1,31 @@
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>{{title}}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,900" rel="stylesheet">
-    <link rel="stylesheet" href="/styles/style.css">
-        <!-- inject:head:html -->
-    <!-- endinject -->
-  </head>
-  <body>
-    <div class="container">
-      {{> language-link }}
-      {{> introduction }}
-      {{> person }}
-      {{> development}}
-      {{#unless languageExtension}}
-        {{> selected-projects}}
-      {{/unless}}
-      {{> customers}}
-      {{> coding}}
-      {{> soft-skills }}
-      {{> links }}
-    </div>
-    <script src="/scripts/bundle.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <title>{{title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/styles/style.css">
+  <!-- inject:head:html -->
+  <!-- endinject -->
+</head>
+
+<body>
+  <div class="container">
+    <!-- prettier-ignore-start -->
+    {{> language-link }}
+    {{> introduction }}
+    {{> person }}
+    {{> development}}
+    {{#unless languageExtension}}
+      {{> selected-projects}}
+    {{/unless}}
+    {{> customers}}
+    {{> coding}}
+    {{> soft-skills }}
+    {{> links }}
+    <!-- prettier-ignore-end -->
+  </div>
+  <script src="/scripts/bundle.js"></script>
+</body>
+
 </html>

@@ -1,8 +1,8 @@
 html {
   background-color: $background-color;
   color: $text-color;
-  font-family: 'Lato', sans-serif;
-
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol';
   @include respond-to(print) {
     background: none;
     color: black;
@@ -25,7 +25,8 @@ a {
     color: $link-color-visited;
   }
 
-  &:active, &:hover {
+  &:active,
+  &:hover {
     color: $link-color-active;
   }
 }
