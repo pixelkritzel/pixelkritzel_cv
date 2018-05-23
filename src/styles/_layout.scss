@@ -25,13 +25,7 @@ dl {
   padding: 0;
   margin: 0;
   list-style: none;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-flow: row wrap;
-  justify-content: space-around;
+  overflow: hidden;
 
   @include respond-to(phone) {
     display: block;
@@ -40,6 +34,11 @@ dl {
   dt, dd {
     margin: 0;
     margin-bottom: $vertical-rhythm;
+    float: left;
+
+    @include respond-to(phone) {
+      float: none;
+    }
   }
 
   dt {

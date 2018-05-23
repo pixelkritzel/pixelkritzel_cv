@@ -4,10 +4,10 @@
       @media only screen and (max-device-width: 375px) { @content; }
     }
     @else if $media == phone {
-      @media only screen and (max-device-width: 736px) { @content; }
+      @media only screen and (max-device-width: 736px), (max-width: 736px) { @content; }
     }
     @else if $media == not_phone {
-      @media only screen and (min-device-width: 737px) { @content; }
+      @media only screen and (min-device-width: 737px), (min-width: 737px) { @content; }
     }
     @else if $media == print {
     @media only print { @content; }
