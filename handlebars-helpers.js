@@ -18,7 +18,7 @@ module.exports = () => {
     const indexOfTitle = keys.indexOf('title');
     keys.splice(indexOfTitle, 1);
     const isYears = keys.every(key => key.match(/(\d{4}(\s*-\s*\d{4})*)/));
-    const sortedKeys = keys.sort((a, b) => a.substring(0, 4) - b.substring(0, 4));
+    const sortedKeys = keys.sort((a, b) => b.substring(0, 4) - a.substring(0, 4));
     sortedKeys.forEach(key => {
       if (field.hasOwnProperty(key)) {
         if (Array.isArray(field[key])) {

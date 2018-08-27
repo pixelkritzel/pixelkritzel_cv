@@ -4,7 +4,8 @@
   "description": "Boilerplate using Gulp, ES6 and SASS",
   "scripts": {
     "server": "./node_modules/.bin/gulp run",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "./node_modules/.bin/gulp build",
+    "deploy": "scp -r build/* pkritzel@grus.uberspace.de:/var/www/virtual/pkritzel/cv.pixelkritzel.de"
   },
   "author": "",
   "devDependencies": {

@@ -20,11 +20,11 @@ development:
 
 selected-projects:
   title: "Selected projects"
-  "2013": "**Toroleo**<br />Architecture, process development and implementation (HTML, CSS, jQuery) of a frontend rewrite based on a *living styleguide"
-  "2013-2015": "**Novacom**<br />Architecture, implementation and design development for the new implementation of a big existing application. One main concern was the documentation of the frontend in form of a *living styleguide*  enabling backend developers to use it without any further knowledge of HTML or CSS. The frontend components had to be completely configurable by a HTML-API. The best comparision would be that I developed something similar to a company tailored Twitter Bootstrap. The browser support had to involve the IE8. Furthermore I developed Backbone.js components, custom jQuery-Plugins and a mobile Ember.js app.<br />Technologies: HTML, CSS, Javascript, jQuery, Jasmine, Grunt, Backbone.js, Ember.js"
-  "2015-2016": "**Smava**<br />Working in an agile team for the new implementation of a internal tool using Backbone.js and Marionette.js"
-  "2017": "**Unit-B Technology**<br />Consulting for the further development of a legacy front-end project. Implementation of a generic React.js app to create mobile wizard systems. Conception and development of an internal commandline tool in Node.js"
   "2018": "**Tourlane**<br /> Feature development and maintenance of an existing project based on Ruby on Rails and React/Redux. New development of a project with React/Next.js. Technologies used: React, Redux, Next.js, SASS, CSS Modules, Styleguidist"
+  "2017": "**Unit-B Technology**<br />Consulting for the further development of a legacy front-end project. Implementation of a generic React.js app to create mobile wizard systems. Conception and development of an internal commandline tool in Node.js"
+  "2015-2016": "**Smava**<br />Working in an agile team for the new implementation of a internal tool using Backbone.js and Marionette.js"
+  "2013-2015": "**Novacom**<br />Architecture, implementation and design development for the new implementation of a big existing application. One main concern was the documentation of the frontend in form of a *living styleguide*  enabling backend developers to use it without any further knowledge of HTML or CSS. The frontend components had to be completely configurable by a HTML-API. The best comparision would be that I developed something similar to a company tailored Twitter Bootstrap. The browser support had to involve the IE8. Furthermore I developed Backbone.js components, custom jQuery-Plugins and a mobile Ember.js app.<br />Technologies: HTML, CSS, Javascript, jQuery, Jasmine, Grunt, Backbone.js, Ember.js"
+  "2013": "**Toroleo**<br />Architecture, process development and implementation (HTML, CSS, jQuery) of a frontend rewrite based on a *living styleguide"
 
 customers:
   title: "Customers"
