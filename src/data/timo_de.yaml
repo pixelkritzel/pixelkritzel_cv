@@ -1,14 +1,14 @@
 ---
 title: "Javascript Developer Timo Zöller"
 introduction: "Hi, Ich bin Timo. Seit fünf Jahren arbeite ich als Frontend-Developer und die letzten drei davon mit dem Schwerpunkt auf Javascript-Single-Page-Applications und Styleguide-zentrierte-Frontend-Architekturen. Ich habe an großen Customer-Relationship-Management-Systemen mitgebaut und mag die Vorstellung, dass mein Code den Arbeitsalltag anderer Menschen verbessert. Als Arbeitsumfeld schätze ich sich einen Umgang auf Augenhöhe und eine offene sowie verantwortungsvolle Arbeitsatmosphäre. Wenn Sie Interesse an einer Zusammenarbeit haben, dann freue ich mich über eine [Email](mailto:timo@pixelkritzel.de) oder einen Anruf ([+49 171 150 555 7](tel:49-171-1505557))."
-imagePath: "/static/images/timo_new.jpg"
+imagePath: "/static/images/timo.jpg"
 
 person:
   title: "Zur Person"
   "Name": "Timo Zöller"
   "Wohnort": "Berlin"
   "Adresse": "Kiehlufer 125<br />12059 Berlin"
-  "Telefon": "+49 171 150 555 7"
+  "Telefon": "[+49 171 150 555 7](tel:49-171-1505557)"
   "Email": "timo@pixelkritzel.de"
 
 development:
@@ -23,7 +23,8 @@ selected-projects:
   "2013": "**Toroleo**<br />Achitektur, Prozessentwicklung und Coding (HTML, CSS, jQuery) für eine Neuentwicklung des Frontend auf Basis eines *Living Styleguides*"
   "2013-2015": "**Novacom**<br />Architektur, Umsetzung und Designweiterentwicklung und Neuentwicklung des Frontends einer bestehenden großen Applikation. Dabei wurde Wert darauf gelegt, dass der Frontend-Code in Form eines Styleguides so dokumentiert wird, dass die vorhandenen Backend-Entwickler kein Javascript oder CSS beherrschen müssen. Die komplette Konfiguration des Frontends musste mit Hilfe von HTML geschehen. Am Besten vergleichen ließe es sich damit, dass ich so etwas wie in firmeninternes Twitter Bootstrap entwickelt habe. Die Browser-Unterstützung reichte bis zum IE8 herunter. Dazu kamen mehrere Backbone-Komponenten, maßgeschneiderte jQuery-Plugins und eine Ember.js Mobile App. Verwendete Technologien: HTML, CSS, Javascript, jQuery, Jasmine, Grunt, Backbone.js, Ember.js"
   "2015-2016": "**Smava**<br />Mitarbeit in einem agilen Team bei der Neuentwicklung eines internen Tools in Backbone.js"
-  "2017": "**Unit-B Technology**<br />Beratung zum Weiterentwicklung eines Legacy-Frontend-Projekts. Umsetzung einer generischen React.js App, um mobile Assitenz-Systeme zu erzeugen. Konzeption und Entwicklung eines internen Commandline Tools in Node.js"
+  "2017": "**Unit-B Technology**<br />Beratung zur Weiterentwicklung eines Legacy-Frontend-Projekts. Umsetzung einer generischen React.js App, um mobile Assitenz-Systeme zu erzeugen. Konzeption und Entwicklung eines internen Commandline Tools in Node.js"
+  "2018": "**Tourlane**<br /> Feature-Entwicklung und Wartung eines bestehenden Projekts auf Basis von Ruby on Rails und React/Redux. Neuentwicklung eines Projekts mit React/Next.js. Verwendete Technologien: React, Redux, Next.js, SASS, CSS Modules, Styleguidist"
 
 customers:
   title: "Kunden (Auswahl)"
@@ -36,7 +37,8 @@ customers:
   "[5apps](https://5apps.com/)",
   "[The Brettinghams](http://www.brettingham.de/)",
   "[Smava](https://www.smava.de/)",
-  "[Unit-B Technology](https://www.unitb-technology.de/)"
+  "[Unit-B Technology](https://www.unitb-technology.de/)",
+  "[Tourlane](https://www.tourlane.de/)"
 ]
 
 coding:

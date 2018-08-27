@@ -1,8 +1,8 @@
 <section>
   <h2>{{ customers.title }}</h2>
-   <ul class="unstyled-list">
-  {{#each customers.list as |customer| }}
-    <li>{{{m customer}}}<span class="unstyled-list-comma">, &nbsp;</span></li>
-  {{/each}}
+  <ul class="unstyled-list">
+    {{#each customers.list as |customer| }}
+    <li>{{{m customer}}}<span class="unstyled-list-comma">,</span></li>
+    {{/each}}
   </ul>
 </section>
