@@ -5,9 +5,8 @@
     width: 250px;
     margin-left: 30px;
     max-width: 100%;
-    padding: 2px;
-    background-color: rgba(255,255,255, .1);
-    border: $one-pixel-in-rem rgba(255,255,255, .2) solid;
+    padding: 0px;
+    border: $one-pixel-in-rem lighten($text-color, 70%) solid;
     @include respond-to(small_phone) {
       float: none;
       width: 100%;

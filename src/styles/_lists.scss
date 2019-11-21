@@ -3,7 +3,8 @@
   padding: 0;
   li {
     /* Did I mention Marked annoying behavior of injecting <p>'s ? */
-    &, & > p {
+    &,
+    & > p {
       display: inline;
     }
 
@@ -26,9 +27,10 @@
     @include respond-to(not_phone) {
       display: inline-block;
       margin-bottom: $vertical-rhythm / 2;
-      padding: ($vertical-rhythm / 2 - $one-pixel-in-rem ) ($vertical-rhythm - $one-pixel-in-rem);
-      background-color: rgba(255,255,255, .1);
-      border: $one-pixel-in-rem rgba(255,255,255, .2) solid;
+      padding: ($vertical-rhythm / 2 - $one-pixel-in-rem) ($vertical-rhythm - $one-pixel-in-rem);
+      color: #181843;
+      background-color: #dcdcf5;
+      border: $one-pixel-in-rem darken(#dcdcf5, 30%) solid;
     }
 
     @include respond-to(phone, print) {
@@ -39,18 +41,19 @@
         background-color: inherit;
         border: none;
       }
-      
-      &, & > p {
+
+      &,
+      & > p {
         display: inline;
       }
 
       &:after {
         display: inline;
-        content: ", ";
+        content: ', ';
       }
 
       &:last-child:after {
-        content: "";
+        content: '';
       }
     }
   }

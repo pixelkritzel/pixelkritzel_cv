@@ -20,6 +20,7 @@ development:
 
 selected-projects:
   title: "Selected projects"
+  "2019": "**Publicis Sapient**<br /> Migrating  an existing web application to React which provides wizard systems for various insurance productivities. Conception and implementation of a modular and component-based architecture. Cooperation in the design of the corresponding rest APIs. Training of the development team so that they can independently further develop the products in React. Technologies used: React, Typescript, Mobx, Mobx-State-Tree, Webpack, Jest, Storybook, SASS/SCSS, CSS Modules"
   "2018": "**Tourlane**<br /> Feature development and maintenance of an existing project based on Ruby on Rails and React/Redux. New development of a project with React/Next.js. Technologies used: React, Redux, Next.js, SASS, CSS Modules, Styleguidist, Styled Components, Contentful"
   "2017": "**Unit-B Technology**<br />Consulting for the further development of a legacy front-end project. Implementation of a generic React.js app to create mobile wizard systems. Conception and development of an internal commandline tool in Node.js"
   "2015-2016": "**Smava**<br />Working in an agile team for the new implementation of a internal tool using Backbone.js and Marionette.js"
@@ -29,25 +30,28 @@ selected-projects:
 customers:
   title: "Customers"
   list: [
-  "[Media-X-Change](http://media-x-change.de/)",
-  "Kluuu (now [Voice Republic](https://voicerepublic.com))",
+  "[Publicis Sapient](https://www.publicissapient.com/)",
+  "[Tourlane](https://www.tourlane.de/)",
+  "Unit-B Technology (now part of [USU](https://www.usu.de/de/meldungen/usu-software-ag-uebernimmt-unitb-technology-gmbh/))",
+  "[Smava](https://www.smava.de/)",
+  "[Novacom](https://www.novacom.eu/)",
   "Toroleo (now [Reifen.de](http://www.reifen.de/))",
   "Headwalk",
-  "[Novacom](https://www.novacom.eu/)",
   "[5apps](https://5apps.com/)",
   "[The Brettinghams](http://www.brettingham.de/)",
-  "[Smava](https://www.smava.de/)",
-  "[Unit-B Technology](https://www.unitb-technology.de/)"
+  "Kluuu (now [Voice Republic](https://voicerepublic.com))",
+  "[Media-X-Change](http://media-x-change.de/)",
 ]
 
 coding:
   title: "Coding"
   "HTML": "Expert"
   "Javascript": "Expert"
-  "JS frameworks": ["React", "Backbone", "Ember", "jQuery", "Handlebars", "Lo-Dash / Underscore"]
-  "JS build tools": ["Grunt", "Gulp", "Webpack"]
+  "Typescript": "Advanced"
   "CSS": "Expert"
-  "CSS buzzwords": ["SASS", "BEM", "Styleguide Driven Development", "Responsive Design", "Progressive Enhancement"]
+  "JS frameworks": ["React", "Backbone", "jQuery", "Handlebars", "Lo-Dash / Underscore"]
+  "JS build tools": ["Grunt", "Gulp", "Webpack"]
+  "CSS techniques": ["SASS", "BEM", "Styleguide Driven Development", "Responsive Design", "Progressive Enhancement"]
 
 soft-skills:
  title: "Soft skills"

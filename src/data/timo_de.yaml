@@ -20,6 +20,7 @@ development:
 
 selected-projects:
   title: "Ausgewählte Projekte"
+  "2019": "**Publicis Sapient**<br /> Portierung auf React einer vorhandenen Webanwendung, in der Antragsstrecken für diverse Versicherungsproduktive implementiert sind. Konzeptionierung und Umsetzung einer modularen und komponentenbasierten Architektur. Kooperation beim Entwurf der entsprechenden Rest-APIs. Training des Entwicklungsteams, damit dieses selbstständig die Produkte in React weiterentwickeln kann. Verwendete Technologien: React, Typescript, Mobx, Mobx-State-Tree, Webpack, Jest, Storybook, SASS/SCSS, CSS Modules"
   "2018": "**Tourlane**<br /> Feature-Entwicklung und Wartung eines bestehenden Projekts auf Basis von Ruby on Rails und React/Redux. Neuentwicklung eines Projekts mit React/Next.js. Verwendete Technologien: React, Redux, Next.js, SASS, CSS Modules, Styleguidist, Styled Components, Contentful"
   "2017": "**Unit-B Technology**<br />Beratung zur Weiterentwicklung eines Legacy-Frontend-Projekts. Umsetzung einer generischen React.js App, um mobile Assitenz-Systeme zu erzeugen. Konzeption und Entwicklung eines internen Commandline Tools in Node.js"
   "2015-2016": "**Smava**<br />Mitarbeit in einem agilen Team bei der Neuentwicklung eines internen Tools in Backbone.js"
@@ -29,8 +30,9 @@ selected-projects:
 customers:
   title: "Kunden (Auswahl)"
   list: [
+  "[Publicis Sapient](https://www.publicissapient.com/)",
   "[Tourlane](https://www.tourlane.de/)",
-  "[Unit-B Technology](https://www.unitb-technology.de/)",
+  "Unit-B Technology (nun Teil von [USU](https://www.usu.de/de/meldungen/usu-software-ag-uebernimmt-unitb-technology-gmbh/))",
   "[Smava](https://www.smava.de/)",
   "[Novacom](https://www.novacom.eu/)",
   "Toroleo (jetzt [Reifen.de](http://www.reifen.de/))",
@@ -45,10 +47,11 @@ coding:
   title: "Coding Kenntnisse"
   "HTML": "Experte"
   "Javascript": "Experte"
-  "JS Frameworks": ["React", "Backbone", "Ember", "jQuery", "Handlebars", "Lo-Dash / Underscore"]
-  "JS Build Tools": ["Grunt", "Gulp", "Webpack"]
+  "Typescript": "Fortgeschritten"
   "CSS": "Experte"
-  "CSS-Buzzwords": ["SASS", "BEM", "Styleguide Driven Development", "Responsive Design", "Progressive Enhancement"]
+  "JS Frameworks": ["React", "Backbone", "jQuery", "Handlebars", "Lo-Dash / Underscore"]
+  "JS Build Tools": ["Grunt", "Gulp", "Webpack"]
+  "CSS Techniken": ["SASS", "BEM", "Styleguide Driven Development", "Responsive Design", "Progressive Enhancement"]
 
 soft-skills:
  title: "Soft Skills"

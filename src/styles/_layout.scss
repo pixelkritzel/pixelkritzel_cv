@@ -3,13 +3,13 @@
 }
 
 .container {
-  max-width: 1024px;
+  max-width: 884px;
   padding: $vertical-rhythm;
   margin: 8vh auto 10vh;
 
   @include respond-to(phone) {
     margin-top: 0;
-  } 
+  }
 
   & > section {
     margin-bottom: $vertical-rhythm * 2;
@@ -31,7 +31,8 @@ dl {
     display: block;
   }
 
-  dt, dd {
+  dt,
+  dd {
     margin: 0;
     margin-bottom: $vertical-rhythm;
     float: left;
@@ -41,8 +42,10 @@ dl {
     }
   }
 
+  $dt-width: 20;
+
   dt {
-    width: 35%;
+    width: #{$dt-width + '%'};
     @include respond-to(phone) {
       font-weight: 900;
       width: auto;
@@ -51,7 +54,7 @@ dl {
   }
 
   dd {
-    width: 65%;
+    width: #{100 - $dt-width + '%'};
     @include respond-to(phone) {
       width: auto;
     }
