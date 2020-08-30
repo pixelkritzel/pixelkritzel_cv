@@ -1,6 +1,7 @@
 ---
+lang: de
 title: "Javascript Developer Timo Zöller"
-introduction: "Hi, Ich bin Timo. Seit sieben Jahren arbeite ich als Frontend-Developer und die letzten fünf davon mit dem Schwerpunkt auf Javascript-Single-Page-Applications und Styleguide-zentrierte-Frontend-Architekturen. Ich habe an großen Customer-Relationship-Management-Systemen mitgebaut und mag die Vorstellung, dass mein Code den Arbeitsalltag anderer Menschen verbessert. Als Arbeitsumfeld schätze ich sich einen Umgang auf Augenhöhe und eine offene sowie verantwortungsvolle Arbeitsatmosphäre. Wenn Sie Interesse an einer Zusammenarbeit haben, dann freue ich mich über eine [Email](mailto:timo@pixelkritzel.de) oder einen Anruf ([+49 171 150 555 7](tel:49-171-1505557))."
+introduction: "Hi, Ich bin Timo. Seit sieben Jahren arbeite ich als Frontend-Developer und die letzten fünf davon mit dem Schwerpunkt auf Javascript-Single-Page-Applications und Styleguide-zentrierte-Frontend-Architekturen. Ich habe an großen Customer-Relationship-Management-Systemen mitgebaut und mag die Vorstellung, dass mein Code den Arbeitsalltag anderer Menschen verbessert. Als Arbeitsumfeld schätze ich sich einen Umgang auf Augenhöhe und eine offene sowie verantwortungsvolle Arbeitsatmosphäre. Wenn Sie Interesse an einer Zusammenarbeit haben, dann freue ich mich über eine [Email](mailto:timo@pixelkritzel.de) oder einen Anruf ([+49 171 150 5557](tel:49-171-1505557))."
 imagePath: "/static/images/timo.jpg"
 
 person:
@@ -13,23 +14,135 @@ person:
 
 development:
   title: "Werdegang"
-  "2002": "Abitur am *Gymnasium Loger Straße* in Osterholz-Scharmbeck"
-  "2003 - 2004": "Studium der Philosophie und Germanistik an *Universität Bremen*"
-  "2004 - 2010": "Studium der Filmregie und Drehbuch an der selbstorganisierten Filmschule *Filmarche e.V.*"
-  "2011 - heute": "Arbeit als freiberuflicher Frontend-Entwickler"
+  list:
+    -
+      start: 2002
+      end: 2002
+      description: "Abitur am *Gymnasium Loger Straße* in Osterholz-Scharmbeck"
+    -
+      start: 2003
+      end: 2004
+      description: "Studium der Philosophie und Germanistik an *Universität Bremen*"
+    -
+      start: 2004
+      end: 2010
+      description: "Studium der Filmregie und Drehbuch an der selbstorganisierten Filmschule *Filmarche e.V.*"
+    -
+      start: 2011
+      end: heute
+      description: "Arbeit als freiberuflicher Frontend-Entwickler"
 
 selected-projects:
   title: "Ausgewählte Projekte"
-  "2019": "**Publicis Sapient**<br /> Portierung auf React einer vorhandenen Webanwendung, in der Antragsstrecken für diverse Versicherungsproduktive implementiert sind. Konzeptionierung und Umsetzung einer modularen und komponentenbasierten Architektur. Kooperation beim Entwurf der entsprechenden Rest-APIs. Training des Entwicklungsteams, damit dieses selbstständig die Produkte in React weiterentwickeln kann. Verwendete Technologien: React, Typescript, Mobx, Mobx-State-Tree, Webpack, Jest, Storybook, SASS/SCSS, CSS Modules"
-  "2018": "**Tourlane**<br /> Feature-Entwicklung und Wartung eines bestehenden Projekts auf Basis von Ruby on Rails und React/Redux. Neuentwicklung eines Projekts mit React/Next.js. Verwendete Technologien: React, Redux, Next.js, SASS, CSS Modules, Styleguidist, Styled Components, Contentful"
-  "2017": "**Unit-B Technology**<br />Beratung zur Weiterentwicklung eines Legacy-Frontend-Projekts. Umsetzung einer generischen React.js App, um mobile Assitenz-Systeme zu erzeugen. Konzeption und Entwicklung eines internen Commandline Tools in Node.js"
-  "2015-2016": "**Smava**<br />Mitarbeit in einem agilen Team bei der Neuentwicklung eines internen Tools in Backbone.js"
-  "2013-2015": "**Novacom**<br />Architektur, Umsetzung und Designweiterentwicklung und Neuentwicklung des Frontends einer bestehenden großen Applikation. Dabei wurde Wert darauf gelegt, dass der Frontend-Code in Form eines Styleguides so dokumentiert wird, dass die vorhandenen Backend-Entwickler kein Javascript oder CSS beherrschen müssen. Die komplette Konfiguration des Frontends musste mit Hilfe von HTML geschehen. Am Besten vergleichen ließe es sich damit, dass ich so etwas wie in firmeninternes Twitter Bootstrap entwickelt habe. Die Browser-Unterstützung reichte bis zum IE8 herunter. Dazu kamen mehrere Backbone-Komponenten, maßgeschneiderte jQuery-Plugins und eine Ember.js Mobile App. Verwendete Technologien: HTML, CSS, Javascript, jQuery, Jasmine, Grunt, Backbone.js, Ember.js"
-  "2013": "**Toroleo**<br />Achitektur, Prozessentwicklung und Coding (HTML, CSS, jQuery) für eine Neuentwicklung des Frontend auf Basis eines *Living Styleguides*"
+  list:
+    -
+      start: 2020
+      end: 2020
+      name: Museum für Naturkunde Berlin
+      link: https://www.museumfuernaturkunde.berlin
+      language: Deutsch
+      description: "Umsetzung von Designvorlagen als Angular Storybook. Beratung zur Software-Architektur und der Content-Verwaltung."
+      used_technologies:
+        - HTML
+        - SCSS
+        - Strapi
+        - Angular
+        - Storybook
+    -
+      start: 2019
+      end: 2019
+      name: Publicis Sapient
+      link: https://www.publicissapient.com/
+      language: Deutsch
+      description: "Portierung auf React einer vorhandenen Webanwendung, in der Antragsstrecken für diverse Versicherungsproduktive implementiert sind. Konzeptionierung und Umsetzung einer modularen und komponentenbasierten Architektur. Kooperation beim Entwurf der entsprechenden Rest-APIs. Training des Entwicklungsteams, damit dieses selbstständig die Produkte in React weiterentwickeln kann."
+      used_technologies:
+        - React
+        - Typescript
+        - Mobx
+        - Mobx-State-Tree
+        - Webpack,
+        - Jest
+        - Storybook
+        - SASS/SCSS
+        - CSS Modules
+    -
+      start: 2018
+      end: 2018
+      name: Tourlane
+      link: https://www.tourlane.de/
+      language: Englisch
+      description: "Feature-Entwicklung und Wartung eines bestehenden Projekts auf Basis von Ruby on Rails und React/Redux. Neuentwicklung eines Projekts mit React/Next.js."
+      used_technologies:
+        - React
+        - Redux
+        - Next.js
+        - Jest
+        - SASS
+        - CSS Modules
+        - Styleguidist
+        - Styled Components
+        - Contentful
+    -
+      start: 2017
+      end: 2017
+      name: Unit-B Technology
+      link: https://www.usu.com/de/meldungen/usu-software-ag-uebernimmt-unitb-technology-gmbh/
+      language: Deutsch
+      description: "Beratung zur Weiterentwicklung eines Legacy-Frontend-Projekts. Umsetzung einer generischen React.js App, um mobile Assitenz-Systeme zu erzeugen. Konzeption und Entwicklung eines internen Commandline Tools in Node.js"
+      used_technologies:
+        - HTML
+        - CSS
+        - SASS
+        - Javascript
+        - jQuery
+        - React
+        - Node.js
+    -
+      start: 2015
+      end: 2016
+      name: Smava
+      link: https://www.smava.de/
+      language: Englisch
+      description: Mitarbeit in einem agilen Team bei der Neuentwicklung eines internen Tools in Backbone.js und Marionette.js
+      used_technologies:
+        - HTML
+        - CSS
+        - jQuery
+        - Backbone.js
+        - Marionette.js
+        - Handlebars
+    -
+      start: 2013
+      end: 2016
+      name: Novacom
+      link: https://www.novacom.eu/
+      language: Deutsch
+      description: "Architektur, Umsetzung und Designweiterentwicklung und Neuentwicklung des Frontends einer bestehenden großen Applikation. Dabei wurde Wert darauf gelegt, dass der Frontend-Code in Form eines Styleguides so dokumentiert wird, dass die vorhandenen Backend-Entwickler kein Javascript oder CSS beherrschen müssen. Die komplette Konfiguration des Frontends musste mit Hilfe von HTML geschehen. Am Besten vergleichen ließe es sich damit, dass ich so etwas wie in firmeninternes Twitter Bootstrap entwickelt habe. Die Browser-Unterstützung reichte bis zum IE8 herunter. Dazu kamen mehrere Backbone-Komponenten, maßgeschneiderte jQuery-Plugins und eine Ember.js Mobile App."
+      used_technologies:
+        - HTML
+        - CSS
+        - Javascript
+        - jQuery
+        - Jasmine
+        - Grunt
+        - Backbone.js
+        - Ember.js
+    -
+      start: 2013
+      end: 2013
+      name: Toroleo
+      language: Englisch
+      link: https://www.deutsche-startups.de/2014/08/25/delticom-uebernimmt-nun-auch-den-preisvergleich-toroleo/
+      description: Achitektur, Prozessentwicklung und Coding für eine Neuentwicklung des Frontend auf Basis eines *Living Styleguides*
+      used_technologies:
+        - HTML
+        - CSS
+        - jQuery
 
 customers:
   title: "Kunden (Auswahl)"
   list: [
+  "[Museum für Naturkunde Berlin](https://www.museumfuernaturkunde.berlin)",
   "[Publicis Sapient](https://www.publicissapient.com/)",
   "[Tourlane](https://www.tourlane.de/)",
   "Unit-B Technology (nun Teil von [USU](https://www.usu.de/de/meldungen/usu-software-ag-uebernimmt-unitb-technology-gmbh/))",
@@ -49,8 +162,9 @@ coding:
   "Javascript": "Experte"
   "Typescript": "Fortgeschritten"
   "CSS": "Experte"
-  "JS Frameworks": ["React", "Backbone", "jQuery", "Handlebars", "Lo-Dash / Underscore"]
-  "JS Build Tools": ["Grunt", "Gulp", "Webpack"]
+  "React": "Experte"
+  "Weitere JavaScript Frameworks": ["React", "Backbone", "jQuery", "Handlebars", "Lo-Dash / Underscore"]
+  "Frontend Build Tools": ["Grunt", "Gulp", "Webpack"]
   "CSS Techniken": ["SASS", "BEM", "Styleguide Driven Development", "Responsive Design", "Progressive Enhancement"]
 
 soft-skills:

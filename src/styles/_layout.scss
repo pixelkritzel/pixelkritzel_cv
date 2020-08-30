@@ -25,7 +25,8 @@ dl {
   padding: 0;
   margin: 0;
   list-style: none;
-  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
 
   @include respond-to(phone) {
     display: block;
@@ -35,17 +36,13 @@ dl {
   dd {
     margin: 0;
     margin-bottom: $vertical-rhythm;
-    float: left;
-
-    @include respond-to(phone) {
-      float: none;
-    }
   }
 
-  $dt-width: 20;
+  $dt-width: 25;
 
   dt {
     width: #{$dt-width + '%'};
+    flex-shrink: 0;
     @include respond-to(phone) {
       font-weight: 900;
       width: auto;
@@ -55,6 +52,7 @@ dl {
 
   dd {
     width: #{100 - $dt-width + '%'};
+    flex-grow: 0;
     @include respond-to(phone) {
       width: auto;
     }

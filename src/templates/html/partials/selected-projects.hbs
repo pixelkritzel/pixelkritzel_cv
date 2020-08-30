@@ -1,9 +1,32 @@
-<section>
-  <h2>{{ selected-projects.title }}</h2>
-  <dl>
-    {{#iterateObject "selected-projects" this}}
-      <dt>{{key}}</dt>
-      <dd>{{{m value}}}</dd>
-    {{/iterateObject}}
-  </dl>
+<section class="selected-projects">
+  <h2>
+    {{selected-projects.title}}
+  </h2>
+  <ul class="unstyled-list">
+    {{#each selected-projects.list}}
+      <li>
+        <section class="selected-projects__project">
+          <time>
+            {{formatYears this.start this.end}}
+          </time>
+          <div class="selected-projects__project__description">
+            <h3>
+              {{this.name}}
+            </h3>
+            <p>
+              {{{m this.description}}}
+            </p>
+            <p>
+              <strong>{{byLanguage ../lang 'Projektsprache' 'Project language'}}:</strong>
+              {{this.language}}
+            </p>
+            <strong>{{byLanguage ../lang 'Verwendete Technologien' 'Used technologies'}}:</strong>
+            {{#each this.used_technologies}}
+              {{this}}{{#unless @last}},{{/unless}}
+            {{/each}}
+          </div>
+        </section>
+      </li>
+    {{/each}}
+  </ul>
 </section>

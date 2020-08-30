@@ -1,0 +1,35 @@
+.selected-projects {
+  .selected-projects__project {
+    display: flex;
+    margin-bottom: $vertical-rhythm * 2;
+
+    @include respond-to(phone) {
+      display: block;
+    }
+
+    time {
+      display: block;
+      width: 106px;
+      flex-shrink: 0;
+      margin-bottom: $vertical-rhythm/2;
+    }
+
+    .selected-projects__project__description {
+      @include respond-to(not_phone) {
+        padding-left: 32px;
+      }
+    }
+
+    h3 {
+      margin-top: 0;
+      margin-bottom: $vertical-rhythm/2;
+      font-size: inherit;
+      font-weight: bold;
+    }
+
+    p {
+      margin-top: 0;
+      margin-bottom: $vertical-rhythm/2;
+    }
+  }
+}

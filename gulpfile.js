@@ -32,15 +32,15 @@ var entryPoint = './src/scripts/index.js',
 // First of all delete any old build directory
 del.sync(browserDir);
 
-gulp.task('browser-sync', function() {
+gulp.task('browser-sync', function () {
   const config = {
-    server: { baseDir: browserDir }
+    server: { baseDir: browserDir },
   };
 
   return browserSync(config);
 });
 
-gulp.task('favicons', function() {
+gulp.task('favicons', function () {
   return gulp
     .src('./favicon.png')
     .pipe(
@@ -57,21 +57,21 @@ gulp.task('favicons', function() {
         online: false,
         html: '../favicons.html',
         pipeHTML: true,
-        replace: true
+        replace: true,
       })
     )
     .pipe(gulp.dest(`${browserDir}/favicons`));
 });
 
-gulp.task('inject-favicon', ['favicons', 'hbs'], function() {
+gulp.task('inject-favicon', ['favicons', 'hbs'], function () {
   gulp
     .src([`${browserDir}/index.html`, `${browserDir}/index_en.html`])
     .pipe(
       inject(gulp.src([`${browserDir}/favicons.html`]), {
         starttag: '<!-- inject:head:html -->',
-        transform: function(filePath, file) {
+        transform: function (filePath, file) {
           return file.contents.toString('utf8'); // return file contents as string
-        }
+        },
       })
     )
     .pipe(gulp.dest(browserDir));
@@ -97,7 +97,7 @@ gulp.task('hbs', () => {
   }
 
   const options = {
-    partialsDirectory: ['./src/templates/html/partials']
+    partialsDirectory: ['./src/templates/html/partials'],
   };
   for (let key in data) {
     const languageExtension = key === 'en' ? '_en' : '';
@@ -111,7 +111,7 @@ gulp.task('hbs', () => {
   return stream;
 });
 
-gulp.task('js', function() {
+gulp.task('js', function () {
   return gulp
     .src(entryPoint)
     .pipe(
@@ -119,25 +119,25 @@ gulp.task('js', function() {
         watch: true,
         devtool: 'source-map',
         module: {
-          loaders: [{ test: /\.js$/, loader: 'babel' }]
+          loaders: [{ test: /\.js$/, loader: 'babel' }],
         },
         output: {
-          filename: 'bundle.js'
-        }
+          filename: 'bundle.js',
+        },
       })
     )
     .pipe(gulp.dest('./build/scripts'))
     .on('data', () => browserSync.reload());
 });
 
-gulp.task('sass', function() {
+gulp.task('sass', function () {
   return gulp
     .src(sassWatchPath)
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(
       autoprefixer({
-        browsers: ['last 2 versions']
+        browsers: ['last 2 versions'],
       })
     )
     .pipe(sourcemaps.write())
@@ -145,22 +145,26 @@ gulp.task('sass', function() {
     .pipe(browserSync.reload({ stream: true }));
 });
 
-gulp.task('copyStatic', function() {
+gulp.task('copyStatic', function () {
   return gulp.src(staticPath + '/**/*').pipe(gulp.dest('./build/static'));
 });
 
-gulp.task('watch', function() {
+gulp.task('watch', function () {
   gulp.watch(jsWatchPath, ['js']);
   gulp.watch(sassWatchPath, ['sass']);
   gulp.watch([yamlWatchPath, hbsWatchPath], ['hbs']);
   gulp.watch(staticPath + '/**/*', ['copyStatic']);
-  gulp.watch(htmlWatchPath, function() {
+  gulp.watch(htmlWatchPath, function () {
     return gulp.src('').pipe(browserSync.reload({ stream: true }));
   });
 });
 
-gulp.task('compress-js', ['js'], function() {
-  fs.rename(`${browserDir}/scripts/bundle.js`, `${browserDir}/scripts/bundle.tmp.js`, err => err && console.log(err));
+gulp.task('compress-js', ['js'], function () {
+  fs.rename(
+    `${browserDir}/scripts/bundle.js`,
+    `${browserDir}/scripts/bundle.tmp.js`,
+    (err) => err && console.log(err)
+  );
   return gulp
     .src(`${browserDir}/scripts/bundle.tmp.js`)
     .pipe(uglify())
@@ -168,8 +172,12 @@ gulp.task('compress-js', ['js'], function() {
     .pipe(gulp.dest(`${browserDir}/scripts`));
 });
 
-gulp.task('compress-css', ['sass'], function() {
-  fs.rename(`${browserDir}/styles/style.css`, `${browserDir}/styles/style.tmp.css`, err => err && console.log(err));
+gulp.task('compress-css', ['sass'], function () {
+  fs.rename(
+    `${browserDir}/styles/style.css`,
+    `${browserDir}/styles/style.tmp.css`,
+    (err) => err && console.log(err)
+  );
   return gulp
     .src(`${browserDir}/styles/style.tmp.css`)
     .pipe(cleanCSS())
@@ -182,7 +190,7 @@ gulp.task('cleanup', ['compress-js', 'inject-favicon'], () =>
     `${browserDir}/scripts/bundle.tmp.js`,
     `${browserDir}/scripts/bundle.js.map`,
     `${browserDir}/favicons.html`,
-    `${browserDir}/styles/style.tmp.css`
+    `${browserDir}/styles/style.tmp.css`,
   ])
 );
 
@@ -196,5 +204,5 @@ gulp.task('build', [
   'sass',
   'compress-css',
   'copyStatic',
-  'cleanup'
+  'cleanup',
 ]);

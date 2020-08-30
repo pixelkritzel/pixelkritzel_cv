@@ -1,4 +1,5 @@
 ---
+lang: en
 title: "Javascript Developer Timo Zöller"
 introduction: "Hi, I'm Timo. For seven years now I have worked as a frontend developer and five years ago I specialized to mainly Javascript single-page applications and styleguide driven frontend architectures. I worked on big customer relationship systems and I like it when my code helps other people in their daily work. I enjoy working environments where people cooperate as equals to maintain an open and responsible working climate. I would love to work with you - if you are interested in a collaboration please send me an [email](mailto:timo@pixelkritzel.de) or drop me a call ([+49 171 150 555 7](tel:49-171-1505557))."
 imagePath: "/static/images/timo.jpg"
@@ -13,23 +14,135 @@ person:
 
 development:
   title: "Educational and professional background"
-  "2002": "Abitur from *Gymnasium Loger Straße* in Osterholz-Scharmbeck"
-  "2003 - 2004": "Studies of philosophy and German philology at *Universität Bremen*"
-  "2004 - 2010": "Studies of film directing and screenwriting at *Filmarche e.V.*"
-  "2011 - heute": "Working as freelance developer"
+  list:
+    -
+      start: 2002
+      end: 2002
+      description: "Abitur from *Gymnasium Loger Straße* in Osterholz-Scharmbeck"
+    -
+      start: 2003
+      end: 2004
+      description: "Studies of philosophy and German philology at *Universität Bremen*"
+    -
+      start: 2004
+      end: 2010
+      description: "Studies of film directing and screenwriting at *Filmarche e.V.*"
+    -
+      start: 2011
+      end: heute
+      description: "Working as freelance developer"
 
 selected-projects:
   title: "Selected projects"
-  "2019": "**Publicis Sapient**<br /> Migrating  an existing web application to React which provides wizard systems for various insurance productivities. Conception and implementation of a modular and component-based architecture. Cooperation in the design of the corresponding rest APIs. Training of the development team so that they can independently further develop the products in React. Technologies used: React, Typescript, Mobx, Mobx-State-Tree, Webpack, Jest, Storybook, SASS/SCSS, CSS Modules"
-  "2018": "**Tourlane**<br /> Feature development and maintenance of an existing project based on Ruby on Rails and React/Redux. New development of a project with React/Next.js. Technologies used: React, Redux, Next.js, SASS, CSS Modules, Styleguidist, Styled Components, Contentful"
-  "2017": "**Unit-B Technology**<br />Consulting for the further development of a legacy front-end project. Implementation of a generic React.js app to create mobile wizard systems. Conception and development of an internal commandline tool in Node.js"
-  "2015-2016": "**Smava**<br />Working in an agile team for the new implementation of a internal tool using Backbone.js and Marionette.js"
-  "2013-2015": "**Novacom**<br />Architecture, implementation and design development for the new implementation of a big existing application. One main concern was the documentation of the frontend in form of a *living styleguide*  enabling backend developers to use it without any further knowledge of HTML or CSS. The frontend components had to be completely configurable by a HTML-API. The best comparision would be that I developed something similar to a company tailored Twitter Bootstrap. The browser support had to involve the IE8. Furthermore I developed Backbone.js components, custom jQuery-Plugins and a mobile Ember.js app.<br />Technologies: HTML, CSS, Javascript, jQuery, Jasmine, Grunt, Backbone.js, Ember.js"
-  "2013": "**Toroleo**<br />Architecture, process development and implementation (HTML, CSS, jQuery) of a frontend rewrite based on a *living styleguide"
+  list:
+    -
+      start: 2020
+      end: 2020
+      name: Museum für Naturkunde Berlin
+      link: https://www.museumfuernaturkunde.berlin
+      language: German
+      description: "Implementation of design screens as an Angular storybook. Consulting on software architecture and content management."
+      used_technologies:
+        - HTML
+        - SCSS
+        - Strapi
+        - Angular
+        - Storybook
+    -
+      start: 2019
+      end: 2019
+      name: Publicis Sapient
+      link: https://www.publicissapient.com/
+      language: German
+      description: Migrating  an existing web application to React which provides wizard systems for various insurance productivities. Conception and implementation of a modular and component-based architecture. Cooperation in the design of the corresponding rest APIs. Training of the development team so that they can independently further develop the products in React.
+      used_technologies:
+        - React
+        - Typescript
+        - Mobx
+        - Mobx-State-Tree
+        - Webpack
+        - Jest
+        - Storybook
+        - SASS/SCSS
+        - CSS Modules
+    -
+      start: 2018
+      end: 2018
+      name: Tourlane
+      link: https://www.tourlane.de/
+      language: English
+      description: Feature development and maintenance of an existing project based on Ruby on Rails and React/Redux. New development of a project with React/Next.js.
+      used_technologies:
+        - React
+        - Redux
+        - Next.js
+        - Jest
+        - SASS
+        - CSS Modules
+        - Styleguidist
+        - Styled Components
+        - Contentful
+    -
+      start: 2017
+      end: 2017
+      name: Unit-B Technology
+      link: https://www.usu.com/de/meldungen/usu-software-ag-uebernimmt-unitb-technology-gmbh/
+      language: German
+      description: Consulting for the further development of a legacy front-end project. Implementation of a generic React.js app to create mobile wizard systems. Conception and development of an internal commandline tool in Node.js
+      used_technologies:
+        - HTML
+        - CSS
+        - SASS
+        - Javascript
+        - jQuery
+        - React
+        - Node.js
+    -
+      start: 2015
+      end: 2016
+      name: Smava
+      link: https://www.smava.de/
+      language: English
+      description: Working in an agile team for the new implementation of a internal tool using Backbone.js and Marionette.js
+      used_technologies:
+        - HTML
+        - CSS
+        - jQuery
+        - Backbone.js
+        - Marionette.js
+        - Handlebars
+    -
+      start: 2013
+      end: 2016
+      name: Novacom
+      link: https://www.novacom.eu/
+      language: German
+      description: Architecture, implementation and design development for the new implementation of a large existing application. One main concern was the documentation of the frontend in form of a *living styleguide*  enabling backend developers to use it without any further knowledge of HTML or CSS. The frontend components had to be completely configurable by a HTML-API. The best comparision would be that I developed something similar to a company tailored Twitter Bootstrap. The browser support had to involve the IE8. Furthermore I developed Backbone.js components, custom jQuery-Plugins and a mobile Ember.js app.
+      used_technologies:
+        - HTML
+        - CSS
+        - Javascript
+        - jQuery
+        - Jasmine
+        - Grunt
+        - Backbone.js
+        - Ember.js
+    -
+      start: 2013
+      end: 2013
+      name: Toroleo
+      link: https://www.deutsche-startups.de/2014/08/25/delticom-uebernimmt-nun-auch-den-preisvergleich-toroleo/
+      language: English
+      description: Architecture, process development and implementation of a frontend rewrite based on a *living styleguide*
+      used_technologies:
+        - HTML
+        - CSS
+        - jQuery
 
 customers:
   title: "Customers"
   list: [
+  "[Museum für Naturkunde Berlin](https://www.museumfuernaturkunde.berlin)",
   "[Publicis Sapient](https://www.publicissapient.com/)",
   "[Tourlane](https://www.tourlane.de/)",
   "Unit-B Technology (now part of [USU](https://www.usu.de/de/meldungen/usu-software-ag-uebernimmt-unitb-technology-gmbh/))",
@@ -49,8 +162,9 @@ coding:
   "Javascript": "Expert"
   "Typescript": "Advanced"
   "CSS": "Expert"
-  "JS frameworks": ["React", "Backbone", "jQuery", "Handlebars", "Lo-Dash / Underscore"]
-  "JS build tools": ["Grunt", "Gulp", "Webpack"]
+  "React": "Expert"
+  "Further JavaScript frameworks": ["React", "Backbone", "jQuery", "Handlebars", "Lo-Dash / Underscore"]
+  "Frontend build tools": ["Grunt", "Gulp", "Webpack"]
   "CSS techniques": ["SASS", "BEM", "Styleguide Driven Development", "Responsive Design", "Progressive Enhancement"]
 
 soft-skills:
@@ -69,6 +183,6 @@ links:
   "[Twitter](https://twitter.com/pixelkritzel)",
   "[Xing](https://www.xing.com/profile/Timo_Zoeller2)",
   "[Blog](https://blog.pixelkritzel.de)",
-  "[Imprint & Privacy (in Germin)](https://blog.pixelkritzel.de/necessary-shit/)",
+  "[Imprint & Privacy (in German)](https://blog.pixelkritzel.de/necessary-shit/)",
 
 ]
