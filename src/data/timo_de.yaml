@@ -37,6 +37,20 @@ selected-projects:
   list:
     -
       start: 2020
+      end: 2021
+      name: Aperto
+      link: https://www.aperto.com/
+      language: Deutsch
+      description: "Beratung und Umsetzung von Barrierefreiheit nach der BITV in einer vorhandenen Code-Base. Integration von React in eine vorhandene Handlebars-jQuery-Anwendung durch Schaffung einer Kompatibilitätsschicht um auf ein Pub-Sub-System verzichten zu können."
+      used_technologies:
+        - JavaScript
+        - React
+        - SASS
+        - jQuery
+        - Handlebars
+        - ARIA, NVDA, VoiceOver
+    -
+      start: 2020
       end: 2020
       name: Museum für Naturkunde Berlin
       link: https://www.museumfuernaturkunde.berlin
