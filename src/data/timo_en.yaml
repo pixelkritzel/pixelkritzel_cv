@@ -1,7 +1,7 @@
 ---
 lang: en
 title: "Javascript Developer Timo Zöller"
-introduction: "Hi, I'm Timo. For seven years now I have worked as a frontend developer and five years ago I specialized to mainly Javascript single-page applications and styleguide driven frontend architectures. I worked on big customer relationship systems and I like it when my code helps other people in their daily work. I enjoy working environments where people cooperate as equals to maintain an open and responsible working climate. I would love to work with you - if you are interested in a collaboration please send me an [email](mailto:timo@pixelkritzel.de) or drop me a call ([+49 171 150 555 7](tel:49-171-1505557))."
+introduction: "Hi, I'm Timo. For ten years now I have worked as a frontend developer and five years ago I specialized to mainly Javascript single-page applications and styleguide driven frontend architectures. I worked on big customer relationship systems and I like it when my code helps other people in their daily work. I enjoy working environments where people cooperate as equals to maintain an open and responsible working climate. I would love to work with you - if you are interested in a collaboration please send me an [email](mailto:timo@pixelkritzel.de) or drop me a call ([+49 171 150 555 7](tel:49-171-1505557))."
 imagePath: "/static/images/timo.jpg"
 
 person:
@@ -35,6 +35,20 @@ development:
 selected-projects:
   title: "Selected projects"
   list:
+    -
+      start: 2021
+      end: 2023
+      name: HRworks
+      link: https://www.hrworks.de
+      language: German
+      description: "Conceptual design and creation of a framework to convert the previous frontend approach to a generic TypeScript React stack, which can be controlled by the backend as before and at the same time offers the possibility to use microfrontends for future extensions."
+      used_technologies:
+        - TypeScript
+        - React
+        - MobX
+        - Webpack
+        - node.js
+        - SASS
     -
       start: 2020
       end: 2021

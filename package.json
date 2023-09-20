@@ -5,7 +5,7 @@
   "scripts": {
     "server": "./node_modules/.bin/gulp run",
     "build": "./node_modules/.bin/gulp build",
-    "deploy": "scp -r build/* pkritzel@grus.uberspace.de:/var/www/virtual/pkritzel/cv.pixelkritzel.de"
+    "deploy": "scp -r build/* pkritzel@fornjot.uberspace.de:/var/www/virtual/pkritzel/cv.pixelkritzel.de"
   },
   "author": "",
   "devDependencies": {
